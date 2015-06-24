@@ -10,4 +10,10 @@ then
 	django-admin.py startproject ${MODULE} /opt/django/app/
 fi
 
+if [ -n "${DJANGO_INIT_SCRIPT}" ] && [ -f "${DJANGO_INIT_SCRIPT}" ];
+then
+        echo "running init script ${DJANGO_INIT_SCRIPT}"
+        (eval "${DJANGO_INIT_SCRIPT}")
+fi
+
 /usr/bin/supervisord

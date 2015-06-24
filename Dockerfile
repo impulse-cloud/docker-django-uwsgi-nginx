@@ -1,11 +1,13 @@
-FROM debian:jessie
-MAINTAINER Matt Bentley <mbentley@mbentley.net>
-RUN (echo "deb http://http.debian.net/debian/ jessie main contrib non-free" > /etc/apt/sources.list && echo "deb http://http.debian.net/debian/ jessie-updates main contrib non-free" >> /etc/apt/sources.list && echo "deb http://security.debian.org/ jessie/updates main contrib non-free" >> /etc/apt/sources.list)
-RUN apt-get update
+FROM impulsecloud/ic-ubuntu:latest
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential git python python-dev python-setuptools nginx sqlite3 supervisor
-RUN easy_install pip
-RUN pip install uwsgi
+# Forked from https://github.com/mbentley/docker-django-uwsgi-nginx
+MAINTAINER Johann du Toity <johann@impulsecloud.com.au>
+
+RUN apt-get update && apt-get install -y \
+  nginx \
+  supervisor && \
+  pip install uwsgi && \
+  apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD . /opt/django/
 
@@ -13,8 +15,6 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 RUN rm /etc/nginx/sites-enabled/default
 RUN ln -s /opt/django/django.conf /etc/nginx/sites-enabled/
 RUN ln -s /opt/django/supervisord.conf /etc/supervisor/conf.d/
-
-RUN pip install -r /opt/django/app/requirements.txt
 
 VOLUME ["/opt/django/app"]
 EXPOSE 80
