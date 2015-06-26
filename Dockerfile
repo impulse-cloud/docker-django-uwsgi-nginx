@@ -11,10 +11,12 @@ RUN apt-get update && apt-get install -y \
 
 ADD . /opt/django/
 
-RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-RUN rm /etc/nginx/sites-enabled/default
-RUN ln -s /opt/django/django.conf /etc/nginx/sites-enabled/
-RUN ln -s /opt/django/supervisord.conf /etc/supervisor/conf.d/
+RUN echo "daemon off;" >> /etc/nginx/nginx.conf; \
+    rm /etc/nginx/sites-enabled/default; \
+    ln -s /opt/django/django.conf /etc/nginx/sites-enabled/; \
+    ln -s /opt/django/supervisord.conf /etc/supervisor/conf.d/; \
+    sed -i "s#/var/log/nginx/access.log#/dev/stdout#g" /etc/nginx/nginx.conf; \
+    sed -i "s#/var/log/nginx/error.log#/dev/stdout#g" /etc/nginx/nginx.conf
 
 VOLUME ["/opt/django/app"]
 EXPOSE 80
