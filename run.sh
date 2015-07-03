@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -o verbose
+
 # See if we need to wait on any databases
 if [ -n "${PG_ISREADY_URI}" ];
 then
@@ -7,6 +9,25 @@ then
   do
     sleep 5
   done
+fi
+
+if [ -n "${SSH_KEY}" ];
+then
+  mkdir -p /root/.ssh
+  echo "${SSH_KEY}" | base64 --decode > /root/.ssh/id_rsa
+  chmod 700 /root/.ssh/id_rsa
+  echo -e "Host *\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
+fi
+
+if [ -z "${GIT_TREEISH}" ];
+then
+  GIT_TREEISH=HEAD
+fi
+
+if [ -n "${GIT_SSH_REPO}" ];
+then
+  cd /opt/django/app/
+  git archive --format=tar --remote=${GIT_SSH_REPO} ${GIT_TREEISH} | tar xf -
 fi
 
 MODULE=${MODULE:-website}
