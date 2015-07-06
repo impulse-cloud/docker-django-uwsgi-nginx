@@ -27,6 +27,7 @@ fi
 if [ -n "${GIT_SSH_REPO}" ];
 then
   cd /opt/django/app/
+  rm -rf *
   git archive --format=tar --remote=${GIT_SSH_REPO} ${GIT_TREEISH} | tar xf -
 fi
 
