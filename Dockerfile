@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
   nginx \
   supervisor && \
   pip install uwsgi && \
+  pip install lxml && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD . /opt/django/
