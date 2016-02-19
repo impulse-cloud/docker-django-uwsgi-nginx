@@ -20,6 +20,7 @@ ADD . /opt/django/
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf; \
     rm /etc/nginx/sites-enabled/default; \
     ln -s /opt/django/django.conf /etc/nginx/sites-enabled/; \
+    ln -s /opt/django/status.conf /etc/nginx/sites-enabled/; \
     ln -s /opt/django/supervisord.conf /etc/supervisor/conf.d/; \
     sed -i "s#/var/log/nginx/access.log#/dev/stdout#g" /etc/nginx/nginx.conf; \
     sed -i "s#/var/log/nginx/error.log#/dev/stdout#g" /etc/nginx/nginx.conf
