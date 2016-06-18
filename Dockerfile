@@ -1,7 +1,7 @@
-FROM impulsecloud/ic-ubuntu:latest
+FROM impulsecloud/ic-ubuntu:python3.5
 
 # Forked from https://github.com/mbentley/docker-django-uwsgi-nginx
-MAINTAINER Johann du Toity <johann@impulsecloud.com.au>
+MAINTAINER Johann du Toit <johann@impulsecloud.com.au>
 
 RUN apt-get update && apt-get install -y \
   nginx \
