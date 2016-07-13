@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
   pip3 install SQLAlchemy && \
   pip3 install psycopg2 && \
   pip3 install pycrypto && \
+  pip3 install --exists-action=s -r requirements.txt && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD . /opt/django/
