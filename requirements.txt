@@ -16,7 +16,6 @@ cssutils==1.0.1
 dj-database-url==0.3.0
 dj-stripe==0.6.0
 django-braces==1.8.1
-#-e git://github.com/impulse-cloud/django-categories.git#egg=django-categories
 django-categories==1.4.2
 django-celery==3.1.17
 django-cors-headers==1.1.0
@@ -40,8 +39,6 @@ django-secure==1.0.1
 django-storages==1.4.1
 django-sql-explorer==0.9.2
 django_userena==2.0.1
-#django-userena==1.4.1   - Not yet compatible with Django 1.9
-#-e git://github.com/impulse-cloud/django-userena.git#egg=django-userena
 django-vanilla-views==1.0.4
 django-waffle==0.11.1
 djangorestframework==3.3.3
@@ -81,9 +78,7 @@ simplejson==3.8.0
 six==1.10.0
 slacker==0.6.3
 stripe==1.23.0
-# toyplot==0.11.0
--e git://github.com/impulse-cloud/toyplot.git#egg=toyplot
+toyplot==0.12.0
 urllib3==1.10.4
-#wsgiref==0.1.2
 xmltodict==0.9.2
 zope.dottedname==4.1.0
