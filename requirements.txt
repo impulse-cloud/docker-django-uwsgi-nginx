@@ -20,7 +20,7 @@ django-categories==1.4.2
 django-celery==3.1.17
 django-cors-headers==1.1.0
 django-crispy-forms==1.5.1
-django-debug-toolbar==1.4
+django-debug-toolbar==1.5
 #django-dirtyfields==0.8.1
 -e git://github.com/impulse-cloud/django-dirtyfields.git@add_many_to_many_dirty_fields#egg=django-dirtyfields
 django-fernet-fields==0.4
