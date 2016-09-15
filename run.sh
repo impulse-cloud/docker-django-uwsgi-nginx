@@ -2,6 +2,15 @@
 
 set -o verbose
 
+function clean_stop {
+  /usr/bin/supervisorctl stop nginx
+  /usr/bin/supervisorctl stop uwsgi
+  exit
+}
+
+# Docker will send TERM when it's time to shutdown
+trap clean_stop SIGTERM
+
 # See if we need to wait on any databases
 if [ -n "${PG_ISREADY_URI}" ];
 then
@@ -47,4 +56,5 @@ then
         (eval "${DJANGO_INIT_SCRIPT}")
 fi
 
-/usr/bin/supervisord
+/usr/bin/supervisord &
+wait
