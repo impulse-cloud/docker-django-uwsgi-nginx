@@ -1,5 +1,5 @@
 Babel==2.3.4
-Django==1.9
+Django==1.9.12
 Pillow>=2.9.0
 SQLAlchemy>=1.0.6
 Unidecode==0.04.18
@@ -10,6 +10,7 @@ argparse==1.2.1
 billiard==3.3.0.21
 boto==2.40.0
 celery==3.1.19
+certifi==2017.1.23
 contexttimer==0.3.1
 cssselect==0.9.1
 cssutils==1.0.1
@@ -82,9 +83,11 @@ https://github.com/impulse-cloud/pyxero/archive/purchase_orders.zip#egg=pyxero
 redis==2.10.5
 requests==2.11.1
 requests-oauthlib==0.5.0
+requests-toolbelt==0.7.1
 simplejson==3.8.0
 six==1.10.0
 slacker==0.6.3
+smartsheet-python-sdk==1.0.1
 stripe==1.38.0
 toyplot==0.13.0
 urllib3==1.10.4
