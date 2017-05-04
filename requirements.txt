@@ -35,6 +35,7 @@ django-model-utils==2.3.1
 #django-mptt==0.7.4  -   Not yet compatible with Django 1.9
 -e git://github.com/impulse-cloud/django-mptt.git#egg=django-mptt
 django-mptt-admin==0.3.0
+django-notifications-hq==1.2
 django-oauth-toolkit==0.10.0
 django-picklefield==0.3.2
 django-pipeline==1.6.11
