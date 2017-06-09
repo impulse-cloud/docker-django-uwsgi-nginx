@@ -30,3 +30,4 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf; \
 VOLUME ["/opt/django/app"]
 EXPOSE 80
 CMD ["/opt/django/run.sh"]
+
