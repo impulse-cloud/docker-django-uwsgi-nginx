@@ -38,6 +38,13 @@ then
   cd /opt/django/app/
   rm -rf *
   git archive --format=tar --remote=${GIT_SSH_REPO} ${GIT_TREEISH} | tar xf -
+
+  # Git treeish looks something like branch_name:silverlining.io/
+  # Treat everything before : as the branch name
+  GIT_BRANCH=$(echo ${GIT_TREEISH} | awk -F':' '{ print $1 }')
+
+  # Save the current git commit hash to file git_commit_hash
+  git ls-remote ${GIT_SSH_REPO} ${GIT_BRANCH} | awk '{ print $1 }' > git_commit_hash
 fi
 
 MODULE=${MODULE:-website}
