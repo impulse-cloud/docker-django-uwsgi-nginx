@@ -13,6 +13,7 @@ celery==3.1.19
 certifi==2017.1.23
 contexttimer==0.3.1
 contextlib2==0.5.5
+cryptography==1.9
 cssselect==0.9.1
 cssutils==1.0.1
 datadog==0.14.0
@@ -73,9 +74,11 @@ mock==1.3.0
 oauthlib==0.7.2
 openpyxl==2.3.4
 pandas==0.19.2
+pem==17.1.0
 premailer==2.9.2
 psycopg2>=2.6.1
 pycrypto>=2.6.1
+pyopenssl==17.2.0
 pyPEG2==2.15.2
 # pyslack-real==0.5.3  - Waiting for rate limiting to be included in PyPI
 -e git://github.com/loisaidasam/pyslack.git#egg=pyslack
