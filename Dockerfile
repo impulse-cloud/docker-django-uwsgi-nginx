@@ -3,9 +3,11 @@ FROM impulsecloud/ic-ubuntu:16.04
 # Forked from https://github.com/mbentley/docker-django-uwsgi-nginx
 MAINTAINER Johann du Toit <johann@impulsecloud.com.au>
 
-RUN apt-get update && apt-get install -y \
-  nginx \
-  supervisor && \
+RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && \
+  apt-get install -y \
+    nodejs \
+    nginx \
+    supervisor && \
   pip3 install uwsgi && \
   pip3 install lxml && \
   pip3 install cryptography && \
@@ -13,6 +15,7 @@ RUN apt-get update && apt-get install -y \
   pip3 install SQLAlchemy && \
   pip3 install psycopg2 && \
   pip3 install pycrypto && \
+  npm install --global babel-plugin-transform-react-jsx babel-cli && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD . /opt/django/
