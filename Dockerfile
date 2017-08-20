@@ -15,7 +15,11 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && \
   pip3 install SQLAlchemy && \
   pip3 install psycopg2 && \
   pip3 install pycrypto && \
-  npm install --global babel-plugin-transform-react-jsx babel-cli && \
+  npm install --global \
+    babel-cli \
+    babel-plugin-transform-react-jsx \
+    babel-preset-env babel-preset-react \
+    babel-plugin-transform-object-rest-spread && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD . /opt/django/
@@ -27,6 +31,7 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf; \
     ln -s /opt/django/django.conf /etc/nginx/sites-enabled/; \
     ln -s /opt/django/status.conf /etc/nginx/sites-enabled/; \
     ln -s /opt/django/supervisord.conf /etc/supervisor/conf.d/; \
+    ls -s /usr/lib/node_modules/ /node_modules; \
     sed -i "s#/var/log/nginx/access.log#/dev/stdout#g" /etc/nginx/nginx.conf; \
     sed -i "s#/var/log/nginx/error.log#/dev/stdout#g" /etc/nginx/nginx.conf
 
