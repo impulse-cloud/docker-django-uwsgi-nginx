@@ -7,6 +7,7 @@ arrow==0.7.0
 amqp==1.4.9
 anyjson==0.3.3
 argparse==1.2.1
+beautifulsoup4==4.6.0
 billiard==3.3.0.21
 boto==2.40.0
 celery==3.1.19
@@ -91,6 +92,7 @@ redis==2.10.5
 requests==2.18.4
 requests-oauthlib==0.5.0
 requests-toolbelt==0.7.1
+selenium==3.6.0
 simplejson==3.8.0
 six==1.11.0
 slacker==0.6.3
