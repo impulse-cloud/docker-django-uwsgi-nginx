@@ -67,7 +67,7 @@ html2text==2015.6.21
 hypothesis==3.4.2
 ijson==2.2
 jdcal==1.0.1
-jsonfield==1.0.3
+jsonfield==2.0.2
 kombu==3.0.35
 lxml>=3.4.4
 markdown==2.6.2
