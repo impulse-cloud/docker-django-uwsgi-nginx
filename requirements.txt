@@ -42,6 +42,7 @@ django-notifications-hq==1.2
 django-oauth-toolkit==0.10.0
 django-picklefield==0.3.2
 django-pipeline==1.6.11
+django-ratelimit==1.1.0
 django-redis==4.7.0
 django-redis-cache==1.7.1
 django-secure==1.0.1
