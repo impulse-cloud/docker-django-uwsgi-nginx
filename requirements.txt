@@ -58,7 +58,7 @@ drf-nested-routers==0.10.0
 easy-thumbnails==2.2
 elasticsearch==1.6.0
 et-xmlfile==1.0.0
-facebookads==2.10.1
+facebookads==2.11.4
 futures==3.0.5
 oauth2client==4.0.0
 google-api-python-client==1.6.2
