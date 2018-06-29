@@ -87,6 +87,7 @@ pyPEG2==2.15.2
 # pyslack-real==0.5.3  - Waiting for rate limiting to be included in PyPI
 -e git://github.com/loisaidasam/pyslack.git#egg=pyslack
 pystan==2.17.1.0
+pytracking==0.2.0
 python-dateutil==2.4.2
 pytz==2015.7
 # pyxero==?  - Code migration needed to use PyPI version
