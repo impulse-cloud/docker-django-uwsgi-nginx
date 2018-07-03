@@ -76,12 +76,13 @@ kombu==3.0.35
 lxml>=3.4.4
 markdown==2.6.2
 mock==1.3.0
+numpy=1.14.5
 oauthlib==0.7.2
 openpyxl==2.3.4
-pandas==0.19.2
+pandas==0.23.1
 pem==17.1.0
 premailer==2.9.2
-psycopg2>=2.6.1
+psycopg2-binary>=2.7.5
 pycrypto>=2.6.1
 pyopenssl==17.2.0
 pyPEG2==2.15.2
@@ -89,11 +90,11 @@ pyPEG2==2.15.2
 -e git://github.com/loisaidasam/pyslack.git#egg=pyslack
 pystan==2.17.1.0
 pytracking==0.2.0
-python-dateutil==2.4.2
-pytz==2015.7
+python-dateutil==2.7.3
+pytz==2018.5
 # pyxero==?  - Code migration needed to use PyPI version
 https://github.com/impulse-cloud/pyxero/archive/purchase_orders.zip#egg=pyxero
-raven==6.1.0
+raven==6.9.0
 redis==2.10.5
 requests==2.18.4
 requests-oauthlib==0.5.0
