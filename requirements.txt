@@ -11,6 +11,8 @@ argparse==1.2.1
 beautifulsoup4==4.6.0
 billiard==3.3.0.21
 boto==2.40.0
+boto3==1.7.68
+botocore==1.10.68
 celery==3.1.19
 certifi==2017.11.5
 contexttimer==0.3.1
@@ -104,6 +106,7 @@ selenium==3.6.0
 simplejson==3.8.0
 six==1.11.0
 slacker==0.6.3
+smart_open==1.6.0
 smartsheet-python-sdk==1.0.1
 stripe==1.77.1
 toyplot==0.13.0
