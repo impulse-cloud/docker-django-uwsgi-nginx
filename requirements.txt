@@ -102,6 +102,7 @@ redis==2.10.5
 requests==2.18.4
 requests-oauthlib==0.5.0
 requests-toolbelt==0.7.1
+scipy==1.2.1
 selenium==3.6.0
 simplejson==3.8.0
 six==1.11.0
