@@ -62,16 +62,17 @@ drf-nested-routers==0.10.0
 easy-thumbnails==2.2
 elasticsearch==1.6.0
 et-xmlfile==1.0.0
-facebook_business==3.1.2
+facebook_business==3.2.10
 fbprophet==0.3.post2
 futures==3.0.5
 oauth2client==4.0.0
 onetimepass==1.0.1
 google-api-python-client==1.6.2
-googleads==12.2.0
+googleads==17.0.0
 hiredis==0.2.0
 html2text==2015.6.21
 hypothesis==3.4.2
+idna==2.6
 ijson==2.2
 jdcal==1.0.1
 jsonfield==2.0.2
@@ -80,7 +81,7 @@ lxml>=3.4.4
 markdown==2.6.2
 mock==1.3.0
 numpy==1.14.5
-oauthlib==0.7.2
+oauthlib==3.0.1
 openpyxl==2.3.4
 pandas==0.23.3
 pem==17.1.0
@@ -97,10 +98,11 @@ python-dateutil==2.7.3
 pytz==2018.5
 # pyxero==?  - Code migration needed to use PyPI version
 https://github.com/impulse-cloud/pyxero/archive/purchase_orders.zip#egg=pyxero
+PyYAML==4.2b4
 raven==6.9.0
 redis==2.10.5
 requests==2.18.4
-requests-oauthlib==0.5.0
+requests-oauthlib==1.2.0
 requests-toolbelt==0.7.1
 scipy==1.2.1
 selenium==3.6.0
