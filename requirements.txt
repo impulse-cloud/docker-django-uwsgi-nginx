@@ -87,6 +87,7 @@ pandas==0.23.3
 pem==17.1.0
 premailer==2.9.2
 psycopg2-binary>=2.7.5
+pyarrow==0.13.0
 pycrypto>=2.6.1
 pyjwt==1.6.0
 pyopenssl==17.2.0
@@ -118,5 +119,6 @@ urllib3==1.22
 vcrpy==1.10.3
 vcrpy-unittest==0.1.6
 wrapt==1.10.8
+xlrd==1.2.0
 xmltodict==0.9.2
 zope.dottedname==4.1.0
