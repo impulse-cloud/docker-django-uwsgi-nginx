@@ -13,7 +13,7 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && \
   pip3 install cryptography && \
   pip3 install Pillow && \
   pip3 install SQLAlchemy && \
-  pip3 install psycopg2 && \
+  pip3 install psycopg2-binary && \
   pip3 install pycrypto && \
   npm install --global \
     babel-cli \
