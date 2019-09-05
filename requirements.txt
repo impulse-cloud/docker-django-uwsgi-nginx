@@ -59,7 +59,7 @@ drf-nested-routers==0.91
 easy-thumbnails==2.4.2
 elasticsearch==1.6.0
 et-xmlfile==1.0.0
-facebook_business==3.2.10
+facebook_business==4.0.1
 fbprophet==0.3.post2
 futures==3.1.1
 oauth2client==4.0.0
