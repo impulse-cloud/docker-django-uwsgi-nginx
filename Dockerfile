@@ -1,4 +1,4 @@
-FROM impulsecloud/ic-ubuntu:16.04
+FROM impulsecloud/ic-ubuntu:18.04
 
 # Forked from https://github.com/mbentley/docker-django-uwsgi-nginx
 MAINTAINER Johann du Toit <johann@impulsecloud.com.au>
