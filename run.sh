@@ -51,6 +51,11 @@ MODULE=${MODULE:-website}
 
 sed -i "s#module=website.wsgi:application#module=${MODULE}.wsgi:application#g" /opt/django/uwsgi.ini
 
+# Respect UWSGI_PROCESSES setting
+UWSGI_PROCESSES=${UWSGI_PROCESSES:-6}
+sed -i "s#processes = 6#processes = ${UWSGI_PROCESSES}#g" /opt/django/uwsgi.ini
+
+
 if [ ! -f "/opt/django/app/manage.py" ]
 then
 	echo "creating basic django project (module: ${MODULE})"
