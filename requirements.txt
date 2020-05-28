@@ -86,6 +86,7 @@ premailer==2.9.2
 psycopg2-binary>=2.7.5
 pyarrow==0.13.0
 pycrypto>=2.6.1
+pydateinfer==0.3.0
 pyjwt==1.6.0
 pyopenssl==17.2.0
 pyPEG2==2.15.2
