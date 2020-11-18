@@ -45,7 +45,7 @@ django-oauth-toolkit==1.2.0
 django-otp[qrcode]==0.9.3
 django-picklefield==2.0
 django-pipeline==1.6.13
-django-ratelimit==1.1.0
+django-ratelimit==3.0.1
 django-redis==4.8.0
 django-redis-cache==1.7.1
 django-storages==1.6.5
@@ -98,6 +98,7 @@ pyPEG2==2.15.2
 pystan==2.17.1.0
 pytracking==0.2.0
 python-dateutil==2.7.3
+python-freshdesk==1.3.7
 pytz==2018.5
 # pyxero==?  - Code migration needed to use PyPI version
 https://github.com/impulse-cloud/pyxero/archive/purchase_orders.zip#egg=pyxero
