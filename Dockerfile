@@ -7,6 +7,7 @@ RUN apt-get update && \
   apt-get install -y \
     dumb-init \
     gettext \
+    mbuffer \
     nginx \
     python3-venv \
     supervisor && \
