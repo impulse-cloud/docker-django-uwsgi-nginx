@@ -6,10 +6,17 @@ MAINTAINER Johann du Toit <johann@impulsecloud.com.au>
 RUN apt-get update && \
   apt-get install -y \
     dumb-init \
+    gettext \
     nginx \
+    python3-venv \
     supervisor && \
   pip3 install uwsgi && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+COPY ./install_singer.sh /root/singer/
+COPY ./singer-connectors /root/singer/singer-connectors
+RUN ls -al /root/singer/singer-connectors/
+RUN /root/singer/install_singer.sh && rm -rf /root/singer
 
 ADD ./requirements.txt /opt/django/
 

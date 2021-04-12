@@ -20,6 +20,7 @@ cryptography==2.1.1
 cssselect==0.9.1
 cssutils==1.0.1
 datadog==0.14.0
+dbt==0.19.1
 dj-database-url==0.3.0
 django-braces==1.13.0
 django-cachalot==2.1.0
